@@ -20,7 +20,7 @@ https://dev-amazon-web-services-ncm543yw.authentication.us10.hana.ondemand.com/l
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![Login](https://github.com/nerilab/Workshop-IntegrationSuite-CI/blob/main/images/Login.jpg)
 
 
 ## Groovy Get Name and City
@@ -43,3 +43,5 @@ def Message processData(Message message) {
 }
 ```
 
+https://api-colombia.com/
+https://api-colombia.com/swagger/index.html
