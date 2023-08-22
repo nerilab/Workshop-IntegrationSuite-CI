@@ -18,7 +18,6 @@ https://dev-amazon-web-services-ncm543yw.authentication.us10.hana.ondemand.com/l
 - Enviar para el S4
 
 ## Passo 1
-Paso 1
 
 ![Login](/images/Login.jpg)
 ![Initial Page](/images/Initial-Page.jpg)
@@ -88,40 +87,14 @@ https://api-colombia.com/api/v1/City/name/${property.city}
 ![Initial Page](/images/Exe1-Test-create-request-set-auth.png)
 ![Initial Page](/images/Exe1-Test-request-send.png)
 
-##Paso 2
-![Initial Page](/images/Exe2 - Create-local-integrate-process.png)
-![Initial Page](/images/XXXXXXx.png)
-![Initial Page](/images/XXXXXXx.png)
-![Initial Page](/images/XXXXXXx.png)
-![Initial Page](/images/XXXXXXx.png)
-![Initial Page](/images/XXXXXXx.png)
-
-
-
-
-## Groovy Get Name and City
-
-```groovy
-import com.sap.gateway.ip.core.customdev.util.Message;
-import java.util.HashMap;
-import groovy.json.*;
-
-def Message processData(Message message) {
-    
-    def body = message.getBody(String)
-    def jsonParser = new JsonSlurper()
-    def jsonObject = jsonParser.parseText(body)
-
-    message.setProperty("name", jsonObject.name)
-    message.setProperty("city", jsonObject.city)
-    
-    return message;
-}
-```
-
-https://api-colombia.com/
-https://api-colombia.com/swagger/index.html
-
+## Paso 2
+![Initial Page](/images/Exe2-Create-local-integrate-process.png)
+![Initial Page](/images/Exe2-Create-local-integrate-process-change-name.png)
+![Initial Page](/images/Exe2-Local-integrate-process-add-groovy.png)
+![Initial Page](/images/Exe2-Local-integrate-process-add-groovy2.png)
+![Initial Page](/images/Exe2-Local-integrate-process-rename-groovy.png)
+![Initial Page](/images/Exe2-Local-integrate-process-groovy-script-code.png)
+![Initial Page](/images/Exe2-Local-integrate-process-groovy-script-code-save-antes.png)
 ## Groovy set JSON to S4
 
 ```groovy
@@ -160,4 +133,87 @@ def Message processData(Message message) {
     return message;
 }
 ```
+
+![Initial Page](/images/Exe2-Local-integrate-process-call-local-process.png)
+![Initial Page](/images/Exe2-Local-integrate-process-call-local-process-change-name.png)
+![Initial Page](/images/Exe2-Local-integrate-process-call-local-process-select-local-process.png)
+![Initial Page](/images/Exe2-Local-integrate-process-call-local-process-select-local-process2.png)
+![Initial Page](/images/Exe2-Local-integrate-process-call-local-process-create-content.png)
+![Initial Page](/images/Exe2-Local-integrate-process-call-local-process-create-content2.png)
+![Initial Page](/images/Exe2-Local-integrate-process-call-local-process-create-content3.png)
+![Initial Page](/images/Exe2-Local-integrate-process-call-local-process-content-set-header.png)
+x-csrf-token : fetch
+
+![Initial Page](/images/Exe2-Local-integrate-process-call-local-process-content-set-exchange.png)
+jsonS4 : ${in.body}
+
+![Initial Page](/images/Exe2-Local-integrate-process-call-local-process-create-request-reply.png)
+![Initial Page](/images/Exe2-Local-integrate-process-call-local-process-rename-request-reply.png)
+![Initial Page](/images/Exe2-Local-integration-configure-comunicacion.png)
+![Initial Page](/images/Exe2-Local-integration-configure-comunicacion2.png)
+![Initial Page](/images/Exe2-Local-integration-configure-reciver.png)
+<p>http://187.75.172.242:9222/sap/opu/odata/sap/ZGW_WORKSHOP_SAP_SRV/CitySet</p>
+<p>S4_LAB</p>
+<p>x-crsf-token</p>
+
+
+![Initial Page](/images/Exe2-Local-integration-create-groovy.png)
+![Initial Page](/images/Exe2-Local-integration-create-groovy2.png)
+![Initial Page](/images/Exe2-Local-integration-create-groovy3.png)
+![Initial Page](/images/Exe2-Local-integration-create-groovy-code-save.png)
+## Groovy set cookie
+
+```groovy
+import com.sap.gateway.ip.core.customdev.util.Message;
+import groovy.xml.*;
+import java.io.*;
+ 
+def Message processData(Message message) 
+{
+    def headers = message.getHeaders();
+    def cookie = headers.get("Set-Cookie");
+    StringBuffer bufferedCookie = new StringBuffer();
+    for (Object item : cookie) 
+    {
+        bufferedCookie.append(item + "; ");      
+    }
+    message.setHeader("Cookie", bufferedCookie.toString());
+    
+    
+    def messageLog = messageLogFactory.getMessageLog(message);
+    if(messageLog != null)
+    {
+        messageLog.setStringProperty("Logging_Cookie", bufferedCookie.toString());
+    }
+    return message;
+}
+```
+
+![Initial Page](/images/Exe2-Local-integration-create-groovy-code-rename.png)
+![Initial Page](/images/Exe2-Local-integration-create-content-modify.png)
+![Initial Page](/images/Exe2-Local-integration-rename-content-modify.png)
+![Initial Page](/images/Exe2-Local-integration-create-content-modify-header2.png)
+<p>X-Requested-With : X</p>
+<p>Content-Type : application/json</p>
+
+![Initial Page](/images/Exe2-Local-integration-content-modify-set-jsonbody.png)
+<p>${property.jsonS4}</p>
+
+![Initial Page](/images/Exe2-Local-integration-create-request-to-s4.png)
+![Initial Page](/images/Exe2-Local-integration-create-reciver-s4.png)
+![Initial Page](/images/Exe2-Local-integration-create-connection-with-request-to-reciver.png)
+![Initial Page](/images/Exe2-Local-integration-setting-http-s4.png)
+
+![Initial Page](/images/Exe2-Local-integration-http-configs.png)
+<p>http://187.75.172.242:9222/sap/opu/odata/sap/ZGW_WORKSHOP_SAP_SRV/CitySet</p>
+<p>S4_LAB</p>
+
+![Initial Page](/images/Exe2-Local-integration-deploy-application.png)
+
+![Initial Page](/images/Exe2-Teste-integracion.png)
+
+
+https://api-colombia.com/
+https://api-colombia.com/swagger/index.html
+
 
