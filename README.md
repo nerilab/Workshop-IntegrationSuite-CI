@@ -13,13 +13,13 @@ https://dev-amazon-web-services-ncm543yw.authentication.us10.hana.ondemand.com/l
 
 ## Paso a paso
 
-- [Entrar al sistema](https://shields.io/)
+- Consumir la API de la Colombia
 
-- [Entrar al sistema](https://shields.io/)
+- Enviar para el S4
 
-
-## Screenshots
+## Passo 1
 Paso 1
+
 ![Login](/images/Login.jpg)
 ![Initial Page](/images/Initial-Page.jpg)
 ![Initial Page](/images/Initial-Page-Integration.jpg)
@@ -78,23 +78,23 @@ https://api-colombia.com/api/v1/City/name/${property.city}
 ![Initial Page](/images/Exe1-view-integration.jpg)
 ![Initial Page](/images/Exe1-view-integration-all-integrations.jpg)
 ![Initial Page](/images/Exe1-view-integration-get-url.jpg)
-AQUII
 ![TESTE](/images/Exe1-request-reply-city-save.jpg)
-![Initial Page](/images/Exe1-Test-create-collection-name.jpg)
-![Initial Page](/images/Exe1-Test-create-request.jpg)
-![Initial Page](/images/Exe1-Test-create-request-name.jpg)
-![Initial Page](/images/Exe1-Test-create-request-url-method.jpg)
-![Initial Page](/images/Exe1-Test-create-request-set-body.jpg)
-![Initial Page](/images/Exe1-Test-create-request-set-body-json.jpg)
-![Initial Page](/images/Exe1-Test-create-request-set-auth.jpg)
-![Initial Page](/images/Exe1-Test-request-send.jpg)
+![Initial Page](/images/Exe1-Test-create-collection-name.png)
+![Initial Page](/images/Exe1-Test-create-request.png)
+![Initial Page](/images/Exe1-Test-create-request-name.png)
+![Initial Page](/images/Exe1-Test-create-request-url-method.png)
+![Initial Page](/images/Exe1-Test-create-request-set-body.png)
+![Initial Page](/images/Exe1-Test-create-request-set-body-json.png)
+![Initial Page](/images/Exe1-Test-create-request-set-auth.png)
+![Initial Page](/images/Exe1-Test-request-send.png)
 
-![Initial Page](/images/XXXXXXx.jpg)
-![Initial Page](/images/XXXXXXx.jpg)
-![Initial Page](/images/XXXXXXx.jpg)
-![Initial Page](/images/XXXXXXx.jpg)
-![Initial Page](/images/XXXXXXx.jpg)
-![Initial Page](/images/XXXXXXx.jpg)
+##Paso 2
+![Initial Page](/images/Exe2 - Create-local-integrate-process.png)
+![Initial Page](/images/XXXXXXx.png)
+![Initial Page](/images/XXXXXXx.png)
+![Initial Page](/images/XXXXXXx.png)
+![Initial Page](/images/XXXXXXx.png)
+![Initial Page](/images/XXXXXXx.png)
 
 
 
