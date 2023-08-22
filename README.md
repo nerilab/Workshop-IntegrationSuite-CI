@@ -20,7 +20,7 @@ https://dev-amazon-web-services-ncm543yw.authentication.us10.hana.ondemand.com/l
 
 ## Screenshots
 
-![Login](https://github.com/nerilab/Workshop-IntegrationSuite-CI/blob/main/images/Login.jpg)
+![Login](/images/Login.jpg)
 
 
 ## Groovy Get Name and City
