@@ -79,7 +79,7 @@ https://api-colombia.com/api/v1/City/name/${property.city}
 ![Initial Page](/images/Exe1-view-integration-all-integrations.jpg)
 ![Initial Page](/images/Exe1-view-integration-get-url.jpg)
 AQUII
-![TESTE](/images/Exe1-Test-create-collection.jpg)
+![TESTE](/images/Exe1-request-reply-city-save.jpg)
 ![Initial Page](/images/Exe1-Test-create-collection-name.jpg)
 ![Initial Page](/images/Exe1-Test-create-request.jpg)
 ![Initial Page](/images/Exe1-Test-create-request-name.jpg)
