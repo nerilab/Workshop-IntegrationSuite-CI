@@ -45,3 +45,42 @@ def Message processData(Message message) {
 
 https://api-colombia.com/
 https://api-colombia.com/swagger/index.html
+
+## Groovy set JSON to S4
+
+```groovy
+import com.sap.gateway.ip.core.customdev.util.Message;
+import java.util.HashMap;
+import groovy.json.*;
+
+def Message processData(Message message) {
+    
+    def body = message.getBody(String)
+    def jsonParser = new JsonSlurper()
+    def jsonObject = jsonParser.parseText(body)
+    def builder = new JsonBuilder()
+    println(jsonObject.size)
+    if (jsonObject.size > 0){
+        def obj = jsonObject[0]
+        def json = builder {
+            "createby" new String(message.getProperty("name").getBytes("UTF8"))
+            "id" obj.id ?: 0
+            "name" obj.name ?: ""
+            "surface" obj.surface ?: 0
+            "population" obj.population ?: 0
+            "postalCode" obj.postalCode ?: ""
+            "departmentId" obj.departmentId ?: ""
+            "department" obj.department ?: ""
+            "touristAttractions" obj.touristAttractions ?: ""
+            "presidents" obj.presidents ?: ""
+        }
+
+        message.setBody(JsonOutput.prettyPrint(JsonOutput.toJson(json)))
+    }else{
+        message.setBody()
+    }
+  
+    return message;
+}
+```
+
