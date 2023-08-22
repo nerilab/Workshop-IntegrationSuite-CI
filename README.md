@@ -7,7 +7,7 @@ Básicamente, fue construido para ser el sucesor del antiguo integrador PI/PO. C
 
 Abramos la URL de nuestro Cloud Integration.
 
-https://dev-amazon-web-services-ncm543yw.authentication.us10.hana.ondemand.com/login
+https://dev-amazon-web-services-ncm543yw.integrationsuite.cfapps.us10-002.hana.ondemand.com/shell/home
 
 
 
