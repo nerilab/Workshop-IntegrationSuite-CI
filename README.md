@@ -83,9 +83,6 @@ https://api-colombia.com/api/v1/City/name/${property.city}
 ![Initial Page](/images/Exe1-Test-create-request-name.png)
 ![Initial Page](/images/Exe1-Test-create-request-url-method.png)
 ![Initial Page](/images/Exe1-Test-create-request-set-body.png)
-![Initial Page](/images/Exe1-Test-create-request-set-body-json.png)
-![Initial Page](/images/Exe1-Test-create-request-set-auth.png)
-![Initial Page](/images/Exe1-Test-request-send.png)
 ## JSON to send to Integration
 
 ```JSON
@@ -94,6 +91,10 @@ https://api-colombia.com/api/v1/City/name/${property.city}
     "city":"Bogotá D.C."
 }
 ```
+![Initial Page](/images/Exe1-Test-create-request-set-body-json.png)
+![Initial Page](/images/Exe1-Test-create-request-set-auth.png)
+![Initial Page](/images/Exe1-Test-request-send.png)
+
 
 ## Paso 2
 ![Initial Page](/images/Exe2-Create-local-integrate-process.png)
