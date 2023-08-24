@@ -86,6 +86,14 @@ https://api-colombia.com/api/v1/City/name/${property.city}
 ![Initial Page](/images/Exe1-Test-create-request-set-body-json.png)
 ![Initial Page](/images/Exe1-Test-create-request-set-auth.png)
 ![Initial Page](/images/Exe1-Test-request-send.png)
+## JSON to send to Integration
+
+```JSON
+{
+    "name":"Nombre",
+    "city":"Bogotá D.C."
+}
+```
 
 ## Paso 2
 ![Initial Page](/images/Exe2-Create-local-integrate-process.png)
